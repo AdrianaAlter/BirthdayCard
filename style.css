@@ -1,0 +1,374 @@
+html {
+  background: #871145;
+  color: #871145;
+  font-family: "Cookie", cursive;
+}
+h1 {
+  color: white;
+  text-shadow: 3px 3px 8px #BF7F00, -3px -3px 8px #BF7F00;
+  font-size: 20vh;
+  letter-spacing: 2px;
+  line-height: 250%;
+}
+#welcome button {
+  bottom: 10%;
+  width: 40%;
+  border-radius: 4%;
+  height: 20%;
+  left: 30%;
+}
+
+#scene, #welcome {
+  background-color: #C8A2C9;
+  border-radius: 5%;
+  display: flex;
+  justify-content: center;
+  height: 90vh;
+  width: 90vw;
+  position: relative;
+  margin: 5vh auto;
+  background-position: center;
+}
+#scene {
+  display: none;
+}
+  #scene:before {
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url("./images/bg2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .wing {
+    width: 55%;
+    z-index: 1;
+    float: right;
+    height: 100%;
+    background: papayawhip;
+    transition: background 2s;
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+    border-left: 1vh solid #A15DAC;
+  }
+  .wing:first-child{
+    border-top-left-radius: 5%;
+    border-bottom-left-radius: 5%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    float: left;
+    border-right: 1vh solid #A15DAC;
+    border-left: none;
+  }
+
+  ul {
+    height: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    border-bottom: .1vh solid #621A35;
+  }
+  li {
+    height: 20%;
+    width: 18%;
+    border-radius: 50%;
+    margin: .5vw;
+    cursor: pointer;
+    background-size: contain;
+  }
+  li:hover {
+    box-shadow: .1vh .1vh .5vh black;
+  }
+  #cake {
+    height: 35%;
+    width: 35%;
+    position: absolute;
+    bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    #cake #plate {
+      background: #8d0019;
+      display: block;
+      height: 25%;
+      width: 80%;
+      box-shadow: 1px 1px 1px darkred;
+      border-radius: 80%;
+      border: 1vh double salmon;
+      margin: -8% auto 0 auto; }
+    #cake #plate:before {
+      display: block;
+      content: "";
+      height: 80%;
+      width: 90%;
+      border-radius: 64%;
+      background: transparent;
+      border: 1px solid #1a1a1a;
+      border-bottom: 2px solid #531616;
+      box-shadow: inset 1px 5px 5px 5px #270007;
+      margin: 0 auto; }
+    #cake .tier {
+      display: block;
+      border-radius: 44%/600%;
+      background: linear-gradient(to right, #8e6937, #c49c67, #f5cf88, #f9e2b7, oldlace, oldlace, oldlace, #f9e2b7, #f5cf88, #c49c67, #8e6937);
+      width: 50%;
+      height: 25%;
+      padding: 0% 5.5%;
+      margin: 0 auto;
+      z-index: 1; }
+    #cake .tier:nth-child(odd) {
+      height: 2%;
+      width: 46%;
+      background: linear-gradient(to right, #2d1606, #5a2c0c, #874212, #b45818, #874212, #5a2c0c, #2d1606);
+      border-radius: 0; }
+        #cake #candles {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      height: 25%;
+      width: 50%;
+      margin: auto; }
+      #cake #candles .candle {
+        border-radius: 62%/4%;
+        display: block;
+        height: 100%;
+        width: 5%;
+        background: linear-gradient(to right, #c00022, papayawhip 20%, #c00022, #c00022); }
+      .flame {
+          content: "";
+          display: none;
+          background: #eda92a;
+          box-shadow: 0px -7px 3px 5px ivory;
+          margin-left: 4px;
+          height: 20px;
+          width: 3px;
+          border-radius: 40% 40% 6% 6%;
+          position: absolute;
+          top: -47%;
+          animation: flicker 2s infinite;
+        }
+
+@keyframes flicker {
+  0%, 20%, 80%, 100% {
+    box-shadow: 0px -7px 3px 5px ivory; }
+  5%, 25%, 55%, 85% {
+    box-shadow: 1px -7px 3px 7px ivory; }
+  10%, 50%, 90% {
+    box-shadow: 1px -7px 3px 6px ivory; }
+  15%, 40%, 60%, 75%, 95% {
+    box-shadow: -1px -7px 3px 7px ivory; }
+  30%, 70% {
+    box-shadow: -1px -7px 3px 6px ivory; } }
+
+    #balloons {
+      height: 90vh;
+      width: 90vw;
+      position: relative;
+      margin: auto;
+      border-radius: 30%;
+    }
+    .balloon:before {
+      border-radius: 88%  88%  84%  84%  / 92%   92%   92%  92%;
+      content: "";
+      left: 5%;
+      position: absolute;
+      top: 1%;
+      width: 90%;
+      z-index: 2;
+      background: radial-gradient(circle at 130% 130%, transparent 0, transparent 46%, oldlace 50%, bisque 58%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
+
+      height: 80%;
+      width: 40%;
+      transform: translateX(131%) translateY(58%) rotateZ(168deg) rotateX(10deg);
+      -moz-transform: translateX(131%) translateY(58%) rotateZ(168deg) rotateX(10deg);
+    }
+
+    .balloon:after {
+      border-radius: 88%  88%  84%  84%  / 92%   92%   92%  92%;
+      content: "";
+      height: 80%;
+      left: 10%;
+      position: absolute;
+      top: 5%;
+      transform: rotateZ(-30deg);
+      -moz-transform: rotateZ(-30deg);
+      width: 80%;
+      z-index: 2;
+      background: radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 74%, #fdf5e6 80%, #fdf5e6 84%, rgba(255, 255, 255, 0) 100%);
+      display: block;
+    }
+
+    .balloon {
+      display: block;
+      border: none;
+      animation: drift 10s infinite, blow 20s infinite, bob 6s infinite;
+      opacity: .9;
+      height: 30%;
+      width: 30%;
+      background: radial-gradient(circle at top left, transparent, oldlace 10%, #ff274d 75%, oldlace 100%);
+      border-radius: 88%  88%  84%  84%  / 92%   92%   92%  92%;
+      box-shadow: inset 0 0 1px 1px oldlace;
+      position: absolute;
+      left: 5%;
+      top: 10%;
+      animation-direction: alternate;
+      animation-play-state: paused;
+    }
+    .balloon:nth-child(2){
+      left: 65%;
+      animation-direction: alternate-reverse;
+    }
+
+    .string {
+      display: block;
+      content: "";
+      background: oldlace;
+      border-radius: 40%;
+      box-shadow: 0px 1px 1px #1a1a1a;
+      height: 300px;
+      top: 99%;
+      left: 50%;
+      margin: 0;
+      position: absolute;
+      width: 3px;
+    }
+
+    @keyframes drift {
+      0% {transform: rotate(0deg);}
+      25% {transform: rotate(10deg);}
+      75% {transform: rotate(-10deg);}
+      100% {transform: rotate(0deg);}
+    }
+
+    @keyframes blow {
+      0% {left: 10%};
+      15% {left: 30%};
+      25% {left: 95%};
+      40% {left: 20%};
+      50% {left: 95%};
+      60% {left: 15%}
+      75% {left: 70%};
+      85% {left: 90%};
+      100% {right: 10%};
+    }
+
+    @keyframes bob {
+      0%, 100% { top: 0 };
+      20%, 80% { top: 30% };
+      50% { top: 50% };
+    }
+
+    .wp1 {
+      background-image: url("http://www.commentnation.com/backgrounds/images/damask_wallpaper_seamless_background_black.jpg");
+    }
+    .wp2 {
+      background-image: url("https://s-media-cache-ak0.pinimg.com/736x/00/03/7c/00037c12f3011063979ace96de381cc8.jpg");
+    }
+    .wp3 {
+      background-image: url("http://www.designyourway.net/diverse/darkpat/COLOURlovers.com-victorian_wallpaper.jpg");
+    }
+    .wp4 {
+      background-image: url("https://t3.ftcdn.net/jpg/01/13/64/60/240_F_113646037_gRohMm5KQYWiWDBvTCIqrbdVy2ieLgFs.jpg");
+    }
+    .wp5 {
+      background-image: url("https://s-media-cache-ak0.pinimg.com/736x/e8/e5/4d/e8e54d1aaaffefe53833f7b7ac0042dd.jpg");
+    }
+    .wp6 {
+      background-image: url("https://s-media-cache-ak0.pinimg.com/736x/ee/8d/68/ee8d6860a2424eeb684816a43698768e.jpg");
+    }
+    .wp7 {
+      background-image: url("https://69445235844b78bbd4c8-40765e7850b487e7db6d0b1ca2adcee0.ssl.cf3.rackcdn.com/_assets/images/cache/productcatalogue/productdetailzoom/DMFPCO205_zoom.jpg");
+    }
+    .wp8 {
+      background-image: url("https://s-media-cache-ak0.pinimg.com/236x/72/35/f7/7235f7ffa22edeef1f3ad4066f790b44.jpg");
+    }
+    .wp9 {
+      background-image: url("https://s-media-cache-ak0.pinimg.com/236x/4b/dd/7c/4bdd7cacd83d0927be58c488eb9bf6d9.jpg");
+    }
+    .wp10 {
+      background-image: url("https://s-media-cache-ak0.pinimg.com/236x/4a/09/2d/4a092d8b11fe19e3f01765e3d4e5a53c.jpg");
+    }
+    .wp11 {
+      background-image: url("https://www.sketchuptextureclub.com/public/texture_f/floral-wallpapers-textures-seamless-cover.jpg");
+    }
+    .wp12 {
+      background-image: url("https://s-media-cache-ak0.pinimg.com/736x/91/05/29/9105293a2cd01a4e82685ac2c0987150.jpg");
+    }
+
+
+
+    .hat {
+        width: 0;
+        height: 0;
+        border-left: 55px solid transparent;
+        border-right: 55px solid transparent;
+        border-bottom: 110px solid  #ff274d;
+        transform: rotate(-17deg);
+        position: absolute;
+        top: 22%;
+        transition: opacity 2s;
+        left: 15%;
+        border-radius: 42%;
+    }
+
+    .hat:nth-child(2) {
+      left: 83%;
+      top: 28%;
+      transform: rotate(3deg);
+    }
+
+    .hat:before {
+      content: "";
+      display: block;
+      opacity: 0;
+      border-left: 7px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 74px solid #fff3f5;
+      transition: opacity 2s;
+      z-index: 1;
+      transform: rotate(-11deg);
+      border-radius: 40%;
+      opacity: .8;
+    }
+
+    .hat:after {
+      content: "";
+      opacity: 0;
+      transition: opacity 2s;
+      position: absolute;
+      background: oldlace;
+      box-shadow: -6px -4px 6px 12px oldlace;
+      border-radius: 50%;
+      height: 10px;
+      top: 0%;
+      width: 10px;
+    }
+
+    button {
+      position: absolute;
+      bottom: 0;
+      left: 45%;
+      width: 10%;
+      height: 8%;
+      background: #621A35;
+      font-family: 'Kalam', cursive;
+      font-size: 4vh;
+      transition: background 1s;
+      border: .5vh solid papayawhip;
+      border-radius: 10%;
+      outline: none;
+      box-shadow: 0;
+      color: oldlace;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #871145;
+      cursor: pointer;
+    }
+    button:nth-child(2){
+      font-size: 4vh;
+    }
